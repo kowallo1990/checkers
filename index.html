@@ -69,6 +69,10 @@ function appendDiv(where, what) {
   where.appendChild(what);
 }
 
+function madeDivDraggeble(divname) {
+  divname.setAttribute('draggable', 'true')
+}
+
 //made board
 function chceckRow() {
   if (firstBrown) {
@@ -110,6 +114,7 @@ for (var p = 0; p < 24; p++) {
     var newPaw = madeDiv();
     madeRow(newPaw, "fill");
     madeRow(newPaw, "fill-white");
+    madeDivDraggeble(newPaw);
     appendDiv(empties[p], newPaw)
   }
 }
@@ -119,6 +124,7 @@ for (var q = 63; q > 39; q--) {
     var newPaw = madeDiv();
     madeRow(newPaw, "fill");
     madeRow(newPaw, "fill-black");
+    madeDivDraggeble(newPaw);
     appendDiv(empties[q], newPaw)
   }
 }
